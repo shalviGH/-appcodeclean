@@ -1,0 +1,27 @@
+<!-- src/app/presentation/components/user-list/user-list.component.html -->
+<div>
+  <ul>
+    <table class="min-w-full bg-white border border-gray-200" border="1">
+      <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+      </thead>
+      <tbody>
+      @for(user of users; track $index) {
+        <tr>
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      }@empty {
+        <p>No hay usuarios en la lista</p>
+      }
+      </tbody>
+    </table>
+  </ul>
+</div>
+
+
